@@ -9,10 +9,12 @@
 
   <script>
     window.addEventListener('message', (e) => {
+      if(e?.data?.keyCode){
         const root = document.querySelector('#root')
         const span = document.createElement('span')
         span.innerText = `KeyCode: ${e.data.keyCode}`
         root.append(span)
+      }
     })
   </script>
   <style>
